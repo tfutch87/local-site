@@ -1,0 +1,402 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&family=Roboto&display=swap');
+</style>
+
+
+
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	min-height: 1500px;
+	scroll-snap-type: y mandatory;
+	font-family: 'Montserrat', sans-serif;
+
+	font-size: 16px;
+}
+
+p{
+	font-size: 1em;
+		font-family: 'Roboto', sans-serif;
+}
+
+h1{
+	font-size: 5em;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+	font-size: 4em;
+	font-family: 'Montserrat', sans-serif;
+	color: ghostwhite;
+	font-weight: 700;
+}
+
+#mountains{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 1;
+}
+
+#presentation-title, #presentation-title_sub {
+	z-index: 10000;
+	transition: opacity ease .5s;
+	opacity: 1;
+}
+
+#bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#hero_buttons{
+	z-index: 100;
+}
+
+
+
+#fog-left{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -150px;
+	transform: translate(50px);
+	z-index: -1;
+	
+}
+
+#fog-right{
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: -150px;
+	transform: translate(50px);
+	z-index: -1;
+}
+
+section{
+	min-height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	background: rgb(0,1,1);
+	background-image:
+  linear-gradient(to bottom, #010101, rgba(7,8,21,1.00)),
+  url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg04.deviantart.net%2Fbd6b%2Fi%2F2017%2F180%2Fb%2Fa%2Fnight_sky_by_limetara-dbeghd4.png&f=1&nofb=1');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	
+}
+
+/*
+section:after{
+	
+	content: '';
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 500px;
+	background: linear-gradient(to bottom, #151111, transparent);
+	z-index: 10000;
+	
+	
+}
+*/
+/*
+section:before{
+	
+	content: '';
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(to top, #000000, transparent);
+	z-index: 10000;
+}
+*/
+
+section#hero:before{
+	
+	content: '';
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(to top, #000000, transparent);
+	z-index: 10000;
+}
+
+
+section#hero:after{
+	
+	content: '';
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 500px;
+	background: linear-gradient(to bottom, #151111, transparent);
+	z-index: 10000;
+	mix-blend-mode: color;
+	
+}
+
+#moon{
+	z-index: 10000;
+	position: absolute;
+}
+/*
+
+main body styling*/
+
+#main{
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	position: fixed;
+	
+}
+
+#main>div {
+	
+	height: 500px;
+}
+
+.wrapper {
+  width: 500px;
+	height: 100%;
+  display: block;
+  text-align: center;
+  margin: auto 0;
+}
+
+.roles {
+    font-size: 30px;
+    height: 50px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.roles div {
+    height: 50px;
+    transition: margin-top 1s ease-in-out;
+}
+/*
+
+about section
+*/
+
+section.about_me{
+	
+	background: rgb(0,1,1);
+	background-image:
+  linear-gradient(to bottom, #060714, rgba(7,8,21,1.00)),
+  url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg04.deviantart.net%2Fbd6b%2Fi%2F2017%2F180%2Fb%2Fa%2Fnight_sky_by_limetara-dbeghd4.png&f=1&nofb=1');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 20em 0;
+	
+	
+	
+}
+
+#projects{
+	overflow-x: scroll;
+	
+}
+
+ .card {
+     position: relative;
+     padding: 0;
+     margin: 0 !important;
+     border-radius: 20px;
+     overflow: hidden;
+     max-width: 280px;
+     max-height: 340px;
+     cursor: pointer;
+     border: none;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+ }
+
+ .card .card-image {
+     width: 100%;
+     max-height: 340px
+ }
+
+ .card .card-image img {
+     width: 100%;
+     max-height: 340px;
+     object-fit: cover
+ }
+
+ .card .card-content {
+     position: absolute;
+     bottom: -180px;
+     color: #fff;
+     background: rgba(255, 255, 255, 0.2);
+     backdrop-filter: blur(15px);
+     min-height: 140px;
+     width: 100%;
+     transition: bottom .4s ease-in;
+     box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.1);
+     border-top: 1px solid rgba(255, 255, 255, 0.2)
+ }
+
+ .card:hover .card-content {
+     bottom: 0px
+ }
+
+ .card:hover .card-content h4,
+ .card:hover .card-content h5 {
+     transform: translateY(10px);
+     opacity: 1
+ }
+
+ .card .card-content h4,
+ .card .card-content h5 {
+     font-size: 1.1rem;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     text-align: center;
+     transition: 0.8s;
+     font-weight: 500;
+     opacity: 0;
+     transform: translateY(-40px);
+     transition-delay: 0.2s
+ }
+
+ .card .card-content h5 {
+     transition: 0.5s;
+     font-weight: 200;
+     font-size: 0.8rem;
+     letter-spacing: 2px
+ }
+
+ .card .card-content .social-icons {
+     list-style: none;
+     padding: 0
+ }
+
+ .card .card-content .social-icons li {
+     margin: 10px;
+     transition: 0.5s;
+     transition-delay: calc(0.15s * var(--i));
+     transform: translateY(50px)
+ }
+
+ .card:hover .card-content .social-icons li {
+     transform: translateY(20px)
+ }
+
+ .card .card-content .social-icons li a {
+     color: #fff
+ }
+
+ .card .card-content .social-icons li a span {
+     font-size: 1.3rem
+ }
+
+ @media(max-width: 991.5px) {
+     .container {
+         margin-top: 20px
+     }
+
+     .container .row .col-lg-4 {
+         margin: 20px 0px
+     }
+ }
+
+/*
+
+skills*/
+.row .col-lg {
+  position: relative;
+}
+
+
+.container-about {
+  position: relative;
+  width: 320px;
+  margin: 100px auto 0 auto;
+  perspective: 1000px;
+	color: white;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; 
+  animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face { 
+  position: absolute;
+  width: 300px;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+  display: flex;
+}
+
+span {
+  margin: auto;
+  font-size: 2rem;
+}
+
+
+.carousel__face:nth-child(1) {
+  transform: rotateY(  0deg) translateZ(430px); }
+.carousel__face:nth-child(2) { 
+  background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY( 40deg) translateZ(430px); }
+.carousel__face:nth-child(3) {
+  background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY( 80deg) translateZ(430px); }
+.carousel__face:nth-child(4) {
+  background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(120deg) translateZ(430px); }
+.carousel__face:nth-child(5) { 
+  background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ transform: rotateY(160deg) translateZ(430px); }
+.carousel__face:nth-child(6) { 
+  background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ transform: rotateY(200deg) translateZ(430px); }
+.carousel__face:nth-child(7) { 
+  background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ transform: rotateY(240deg) translateZ(430px); }
+.carousel__face:nth-child(8) {
+  background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(280deg) translateZ(430px); }
+.carousel__face:nth-child(9) {
+  background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(320deg) translateZ(430px); }
+
+
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+#about_card {
+background: rgba(27,15,99,0.92);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20.0px );
+-webkit-backdrop-filter: blur( 20.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
